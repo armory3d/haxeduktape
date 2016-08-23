@@ -54,6 +54,15 @@ class DukContext {
 	public function pop() {
 		untyped __cpp__("duk_pop(ctx)");
 	}
+
+
+	public function requireNumber(index:Int):Float {
+		return untyped __cpp__("duk_require_number(ctx, index)");
+	}
+
+	public function pushNumber(f:Float) {
+		untyped __cpp__("duk_push_number(ctx, f)");
+	}
 }
 
 #else
